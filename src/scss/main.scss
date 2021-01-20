@@ -6,3 +6,9 @@
 
 /* CSS Base */
 @import "base/base", "base/fonts";
+
+/* CSS Layout */
+@import "layout/header";
+
+/* CSS pages */
+@import "pages/home";
