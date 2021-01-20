@@ -79,9 +79,26 @@
 
   .listings-grid {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .listings-col {
+      display: flex;
+      flex-basis: 100%;
+      flex-direction: row;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 25px;
+      scroll-snap-align: start;
+    }
 
     .listings-grid-element {
       margin-top: 2rem;
