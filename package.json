@@ -1,0 +1,101 @@
+{
+  "author": "canliozkan",
+  "name": "webpack-boilerplate",
+  "version": "5.2.2",
+  "description": "Webpack boilerplate",
+  "homepage": "https://github.com/canliozkan/webpack-boilerplate#readme",
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
+  "bugs": {
+    "url": "https://github.com/canliozkan/webpack-boilerplate/issues",
+    "email": "zkan.canl@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Halil Sallabas",
+      "email": "sallabashalil@gmail.com",
+      "url": "https://github.com/hsallabas"
+    },
+    {
+      "name": "Emrah Umut Koc",
+      "email": "emrahumutkoc@gmail.com",
+      "url": "https://github.com/emrahumut"
+    },
+    {
+      "name": "Ozkan Canli",
+      "email": "zkan.canl@gmail.com",
+      "url": "https://github.com/canliozkan"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "ajv": "^7.0.3",
+    "autoprefixer": "^10.2.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "mini-css-extract-plugin": "^1.3.4",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.1.0",
+    "sass": "^1.32.4",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^10.1.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-use-variable": "^1.7.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.15.0",
+    "webpack-bundle-analyzer": "^4.3.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "engines": {
+    "node": "^10 || ^12 || >=14"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "template",
+    "setup"
+  ],
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:canliozkan/webpack-boilerplate.git"
+  },
+  "scripts": {
+    "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
+    "watch": "webpack --config configuration/webpack.dev.config.js --mode=development --watch",
+    "bundle": "npm install && npm run watch",
+    "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
+    "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
+    "lint:sass": "sass-lint -v -q",
+    "lint:js": "eslint --ext .js src/js/",
+    "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
+  },
+  "target": "web"
+}

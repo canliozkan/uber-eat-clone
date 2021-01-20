@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-color: $athens-gray;
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 1.6rem;
+}
+
+.title {
+  background: $ebony-clay;
+  color: $athens-gray;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .first-card-group {
+    flex-direction: row-reverse;
+  }
+
+  .second-card-group {
+  }
+
+  .third-card-group {
+    flex-direction: row-reverse;
+  }
+
+  .card-group {
+    color: $turquoise;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .card {
+      align-items: center;
+      background: $ebony-clay;
+      border: white solid 5px;
+      display: flex;
+      height: calc(100vh / 3);
+      justify-content: center;
+      width: calc(100% / 3);
+
+      span {
+        color: $golden-fizz;
+        font-size: 10rem;
+        font-weight: bold;
+
+        &:hover {
+          color: $athens-gray;
+        }
+      }
+
+      &:hover {
+        opacity: 100%;
+      }
+    }
+
+    .first {
+      opacity: 80%;
+    }
+
+    .second {
+      opacity: 60%;
+    }
+
+    .third {
+      opacity: 40%;
+    }
+  }
+}

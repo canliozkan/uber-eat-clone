@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+    "prettier.singleQuote": true,
+    "prettier.disableLanguages": [],
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#1C2F40",
+      "titleBar.activeBackground": "#27425A",
+      "titleBar.activeForeground": "#F8FAFC"
+    }
+  }

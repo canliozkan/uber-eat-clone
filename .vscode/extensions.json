@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "cipchk.cssrem",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "guillaumedoutriaux.name-that-color",
+    "stylelint.vscode-stylelint",
+    "stuart.unique-window-colors"
+  ]
+}

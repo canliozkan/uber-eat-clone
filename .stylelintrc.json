@@ -1,0 +1,87 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "no-empty-source": null,
+    "no-descending-specificity": null,
+    "indentation": 2,
+    "string-quotes": "double",
+    "unit-whitelist": ["rem", "%", "s", "vw", "deg", "em", "vh", "ms", "px"],
+    "at-rule-name-case": "lower",
+    "at-rule-name-space-after": "always",
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "return",
+          "include",
+          "each",
+          "mixin",
+          "if",
+          "else",
+          "while",
+          "content",
+          "extend",
+          "for",
+          "bottom-center",
+          "at-root"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "ignoreAtRules": ["else"],
+        "ignore": [
+          "blockless-after-same-name-blockless",
+          "after-comment",
+          "first-nested"
+        ]
+      }
+    ],
+    "block-closing-brace-newline-after": [
+      "always",
+      {
+        "ignoreAtRules": ["if", "else"]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "export", "import", "local"]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["font-icon"]
+      }
+    ],
+    "scss/media-feature-value-dollar-variable": "always",
+    "scss/at-import-partial-extension-blacklist": ["scss"],
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "order/properties-alphabetical-order": true,
+    "sh-waqar/declaration-use-variable": [
+      [
+        "/color/",
+        "font-size",
+        "font-weight",
+        {
+          "ignoreValues": [
+            "transparent",
+            "inherit",
+            "0",
+            "/[rgba|darken|map_get]/"
+          ]
+        }
+      ]
+    ]
+  }
+}
